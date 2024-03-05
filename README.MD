@@ -1,7 +1,7 @@
 ### Inicializar Projeto
 
 ```dotnet
-dotnet new webapi 
+dotnet new webapi --use-controllers
 ```
 
 ### Executando o Projeto
