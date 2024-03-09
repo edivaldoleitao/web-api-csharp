@@ -6,6 +6,14 @@
 ![MicrosoftSQLServer](https://img.shields.io/badge/Microsoft%20SQL%20Server-CC2927?style=for-the-badge&logo=microsoft%20sql%20server&logoColor=white)
 ![Azure](https://img.shields.io/badge/azure-%230072C6.svg?style=for-the-badge&logo=microsoftazure&logoColor=white)
 
+
+
+### Inicializar Projeto WEB API
+
+```dotnet
+dotnet new webapi --use-controllers
+```
+
 ### Instalando Entity Framework Globalmente
 
 #### Instalação da Ferramenta
@@ -20,13 +28,6 @@
 dotnet add package Microsoft.EntityFrameworkCore.SqlServer
 ```
 
-
-### Inicializar Projeto
-
-```dotnet
-dotnet new webapi --use-controllers
-```
-
 ### Executando o Projeto
 
 Executa de forma que os arquivos sempre estejam sendo visto e
@@ -35,4 +36,14 @@ atualizados em tempo real
  ```dotnet
  dotnet watch run
  ```
+### Configurando conexão com SQL SERVER
 
+No arquivo de **appsettings Development** para Development ou para produção apenas appsetting  
+adicionado o valor para  conexão para o banco de dados a depender do tipo no caso usado  
+o **SQLEXPRESSE** a chave adicionada foi , sendo no parâmetro **Initial Catalog** o nome do Banco  
+e o  **Integrated Security** significa usar a autenticação padrão do windows
+```json
+"ConnectionStrings": {
+    "ConexaoPadrao": "Server=localhost\\sqlexpress; Initial Catalog=Agenda; Integrated Security=True"
+  }
+```
