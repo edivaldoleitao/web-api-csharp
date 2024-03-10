@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 
 namespace API.Entities
 {
+    //entidade que vai representar uma tabela do banco de dados
     public class Contato
     {
         public int Id { get; set; }

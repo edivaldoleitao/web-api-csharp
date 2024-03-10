@@ -47,3 +47,17 @@ e o  **Integrated Security** significa usar a autenticação padrão do windows
     "ConexaoPadrao": "Server=localhost\\sqlexpress; Initial Catalog=Agenda; Integrated Security=True"
   }
 ```
+
+### Criação das Migrations
+Basicamente as migrations criam as tabelas a partir do método **dbset** da classe context  
+o comando a seguir faz o entity framework criar as tabelas, **(O Banco de Dados deve estar rodando)**  
+
+```dotnet
+dotnet-ef migrations add "nome da migration"
+``` 
+#### Aplicação da Migration
+Após a criação dos arquivos de migration, deve ser aplicado ao Banco de Dados
+
+```dotnet
+dotnet-ef database update
+```
