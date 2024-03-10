@@ -9,7 +9,7 @@ namespace API.Context
 {
     public class AgendaContext : DbContext
     {
-        //faz a conexão com o banco de dados com a seguinte config
+        //faz a conexao com o banco de dados com a seguinte config
         public AgendaContext(DbContextOptions<AgendaContext> options) : base(options)
         {
             

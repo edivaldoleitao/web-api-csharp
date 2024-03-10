@@ -44,7 +44,7 @@ o **SQLEXPRESSE** a chave adicionada foi , sendo no parâmetro **Initial Catalog
 e o  **Integrated Security** significa usar a autenticação padrão do windows
 ```json
 "ConnectionStrings": {
-    "ConexaoPadrao": "Server=localhost\\sqlexpress; Initial Catalog=Agenda; Integrated Security=True"
+    "ConexaoPadrao": "Server=localhost\\sqlexpress; Initial Catalog=Agenda; Integrated Security=True;TrustServerCertificate=True"
   }
 ```
 
