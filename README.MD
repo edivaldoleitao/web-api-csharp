@@ -48,6 +48,16 @@ e o  **Integrated Security** significa usar a autenticação padrão do windows
   }
 ```
 
+### Configurando o serviço de injeção de dependências
+
+Esse trecho de código faz parte da configuração do serviço de contexto do banco de dados  
+e deve ser adicionado ao Program.cs
+
+```dotnet
+builder.Services.AddDbContext<AgendaContext>(options => 
+            options.UseSqlServer(builder.Configuration.GetConnectionString("ConexaoPadrao")));
+```
+
 ### Criação das Migrations
 Basicamente as migrations criam as tabelas a partir do método **dbset** da classe context  
 o comando a seguir faz o entity framework criar as tabelas, **(O Banco de Dados deve estar rodando)**  
